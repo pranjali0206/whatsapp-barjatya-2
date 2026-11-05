@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Welcome | Ashish Barjatya Associates</title>
+  <meta name="description" content="Welcome to Ashish Barjatya Associates. Residential plots in Omaxe and Godrej townships across Indore. Chat with us on WhatsApp or call +91 92000 38706." />
+  <meta name="theme-color" content="#0B1F5C" />
+  <link rel="icon" href="img/aba-logo.jpeg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ashish Barjatya Associates" />
+  <meta property="og:title" content="Welcome to Ashish Barjatya Associates" />
+  <meta property="og:description" content="Residential plots in Omaxe and Godrej townships across Indore. Authorised channel partner for 20 years." />
+  <meta property="og:image" content="img/township.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Mukta:wght@700&family=Sora:wght@600&display=swap" />
+  <style>
+    :root{--navy:#0B1F5C;--navy-lift:#17358C;--gold:#E0B43C;--white:#FFFFFF;--soft:rgba(255,255,255,.8);--head:'Sora',system-ui,-apple-system,'Segoe UI',sans-serif;--body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif}
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--navy);color:var(--white);font-family:var(--body);-webkit-font-smoothing:antialiased}
+    a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+    /* equal rows above and below keep the brand block in the true centre of the screen */
+    .splash{display:grid;grid-template-rows:1fr auto 1fr;justify-items:center;min-height:100vh;min-height:100svh;padding:16px 20px calc(16px + env(safe-area-inset-bottom));text-align:center;background:radial-gradient(circle at 50% 45%,var(--navy-lift) 0%,var(--navy) 75%)}
+    .brand{grid-row:2}
+    .logo{display:block;width:clamp(128px,20vmin,168px);height:auto;aspect-ratio:1;margin-inline:auto;padding:10px;border-radius:50%;object-fit:contain;background:var(--white);box-shadow:0 0 0 3px var(--gold)}
+    h1{margin:24px 0 0;font:600 clamp(30px,5.4vw,54px)/1.12 var(--head);letter-spacing:-.03em;text-wrap:balance}
+    .hindi{margin:12px 0 0;font:700 clamp(20px,2.6vw,28px)/1.35 'Mukta',var(--body);color:var(--gold)}
+
+    /* the way through if a browser blocks the automatic redirect */
+    .fallback{grid-row:3;align-self:end;display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-size:14px;font-weight:500;color:var(--soft);text-underline-offset:3px}
+    .fallback:hover{color:var(--white)}
+  </style>
+</head>
+<body>
+  <main class="splash">
+    <div class="brand">
+      <img class="logo" src="img/aba-logo.jpeg" alt="Ashish Barjatya Associates logo" width="168" height="168" />
+      <h1>Ashish Barjatya Associates</h1>
+      <p class="hindi" lang="hi">जहाँ सपनों को उनका पता मिलता है</p>
+    </div>
+    <a class="fallback" id="whatsapp" href="https://wa.me/919200038706?text=Hello%2C%20I%20would%20like%20to%20know%20about%20plots%20in%20the%20Omaxe%20and%20Godrej%20townships%20in%20Indore.">Opening WhatsApp&hellip; tap here if it doesn't open</a>
+  </main>
+  <script>
+    // replace, not assign: the Back button must not land here and bounce to WhatsApp again
+    setTimeout(function () {
+      location.replace(document.getElementById('whatsapp').href);
+    }, 3000);
+  </script>
+</body>
+</html>
